@@ -126,7 +126,7 @@ How many motifs were found in your genome? _hint: the gene name listed in column
 # LQ 5 
 Select one motif hit and make sure there is on the **positive strand**. The value in the 6th column should be "+". Answer the following questions about your motif hit
 
-- What is the sequence name that it was found on?
+- What is the sequence name that it was found on? (It is the entire "word", for example ```52626_3228_45048_179+,...,43143-```)
 - What is the start position of the motif?
 - What is the end position of the motif?
 
@@ -138,7 +138,25 @@ When the transcription factor binds to the motif, it may regulate the gene that 
 
 We want to look 5,000 base pairs down from our gene. To do this, you will add 5,000 to the **end position** of the motif you found above.
 
-For example, if the motif ended at position 345 I would want to look up until position 5,345.
+For example, if the motif ended at position 246, I would want to look up until position 5,246.
+
+To extract the sequence we want we need to save the information to a file.
+
+```bash
+echo -e "SEQUENCE_NAME\tSTART_POS\tSEARCH_END" > to_get.txt
+```
+
+The ```\t``` character says to print a "tab"
+
+If this were the raw information for my sequence
+
+```52626_3228_45048_179+,...,43143-	231	246```
+
+I would use the command
+
+```echo -e "52626_3228_45048_179+,...,43143-\t231\t5246" > to_get.txt```
+
+The file should then 
 
 
   
