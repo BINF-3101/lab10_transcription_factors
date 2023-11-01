@@ -47,3 +47,45 @@ We have added several new commands **that we will use again** so read about them
 ## Step 3 - Examine your results
 
 The results of the blast search are saved in the file ```tf_results.out```
+
+Take a look at this file but this time use the command 
+
+```bash
+column -t tf_results.out
+```
+
+This will display the results with all the columns aligned
+
+# LQ 1 - How many TFs did you find in your protein sequences? 
+
+There are 12 columns in the file. These are the columns
+
+   1.  qseqid      query or source (gene) sequence id
+
+   2.  sseqid      subject or target (reference genome) sequence id
+
+   3.  pident      percentage of identical positions
+
+   4.  length      alignment length (sequence overlap)
+
+   5.  mismatch    number of mismatches
+
+   6.  gapopen     number of gap openings
+
+   7.  qstart      start of alignment in query
+
+   8.  qend        end of alignment in query
+
+   9.  sstart      start of alignment in subject
+
+ 10.  send        end of alignment in subject
+
+ 11.  evalue      expect value
+
+ 12.  bitscore    bit score
+
+
+# LQ 2 - Which query gene/sequence id had the lowest/most significant e-value? If there is more than one sequence choose one. 
+
+## Step 4 - Find your motif
+
