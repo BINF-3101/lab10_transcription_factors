@@ -156,7 +156,59 @@ I would use the command
 
 ```echo -e "52626_3228_45048_179+,...,43143-\t231\t5246" > to_get.txt```
 
-The file should then 
+Now we want to print the sequence to the screen 
+
+### Step 6b - Get the sequence
+
+We will use bedtools again
+
+```bash
+module load bedtools2
+
+bedtools getfasta -fi SRR00000-contigs.v2.fa -bed to_get.txt
+
+```
+
+**NOTE - IF YOU GET THIS ERROR** you will have to edit your to_get.txt file
+
+If you get an error that says ```Feature (52626_3228_45048_179+,...,43143-:231-5246) beyond the length of 52626_3228_45048_179+,...,43143- size **(3228 bp)**.  Skipping.``` that means you asked for a point _beyond_ the end of the fasta sequence. 
+
+Therefore, instead of the endpoint you previously used, you will substitute it for the value reported. In the example above that is 3228
+
+You will the re-do the previous two steps
+
+For example:
+
+```bash
+echo -e "52626_3228_45048_179+,...,43143-\t231\t3228" > to_get.txt
+bedtools getfasta -fi SRR00000-contigs.v2.fa -bed to_get.txt
+```
+
+You should now have a fasta sequence printed to your screen. 
+
+**COPY THIS SEQUENCE TO A FILE** Copy this sequence to a word document or text document _just in case_ you accidentally close your terminal before completing. 
+
+## Step 7 - Blast your region
+
+We now want to figure out _if there is a gene_ present in our region we extracted. 
+
+We will use BlastX - Open this link to get to blastx https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastx&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome
+
+Paste the sequence from the terminal into the section that says **Enter Query Sequence**
+
+Then click **Blast**
+
+# LQ 6
+Were there any genes in the region you searched?
+
+If so, what is that gene likely to be? This information will likely be in the descriptions of the genes that _do not start with "hypothetical protein" or "uncharacterized protein"_. 
+
+For example, if you got the results shown below, you would say it's probably a "cell wall protein" or "family 17 glucosidase"
+
+![image](https://github.com/BINF-3101/lab10_transcription_factors/assets/47755288/67b2d838-358c-4859-bd30-a7382d2d735b)
+
+
+
 
 
   
