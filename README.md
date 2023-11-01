@@ -2,6 +2,35 @@
 
 In this weeks lab we are going to identify transcription factors in our coding sequences. Then we are going to search for that transcription factor's motif in our original genome. 
 
+[Step 1 - Setup](#step-1---setup)
+
+[Step 2 - Find TFs](#step-2---find-transcription-factors)
+
+[Step 3 - Results](#step-3---examine-your-results)
+
+[LQ 1](#lq-1)
+
+[LQ 2](#lq-2)
+
+[Step 4 - TF info](#step-4---tf-info)
+
+[LQ 3](#lq-3)
+
+[Step 5 - Motif Search](#step-5---search-for-the-motif)
+
+[LQ 4](#lq-4)
+
+[LQ 5](#lq-5)
+
+[Step 6 - Gene?](#step-6---gene)
+
+[Step 7 - Blast](#step-7---blast-your-region)
+
+[LQ 6](#lq-6)
+
+[]()
+
+&nbsp;
 ## Step 1 - Setup
 
 We will need to setup our folder with all the files we will need this week. 
@@ -19,6 +48,8 @@ Copy both of these files to your lab 10 directory.
 You will have a copy of your protein sequences, in the form of```clear_SRR00000.prot.fasta``` in your lab_9 folder. 
 
 You will have a copy of your assembled genome, in the form of ```SRR00000-contigs.v2.fasta``` in your lab_5 folder. 
+
+&nbsp;
 
 ## Step 2 - Find Transcription Factors
 
@@ -44,6 +75,8 @@ We have added several new commands **that we will use again** so read about them
 ```-outfmt 6``` - This format will report statistics for our search in an easy to read format. 
 ```-evalue 1e-50``` - a reasonable threshold for our search
 
+&nbsp;
+
 ## Step 3 - Examine your results
 
 The results of the blast search are saved in the file ```tf_results.out```
@@ -56,7 +89,10 @@ column -t tf_results.out
 
 This will display the results with all the columns aligned
 
-# LQ 1 - How many TFs did you find in your protein sequences? 
+&nbsp;
+
+# LQ 1
+How many TFs did you find in your protein sequences? 
 
 There are 12 columns in the file. These are the columns
 
@@ -84,8 +120,12 @@ There are 12 columns in the file. These are the columns
 
  12.  bitscore    bit score
 
+&nbsp;
 
-# LQ 2 - Which query gene/sequence id had the lowest/most significant e-value? If there is more than one sequence, choose one. 
+# LQ 2
+Which query gene/sequence id had the lowest/most significant e-value? If there is more than one sequence, choose one. 
+
+&nbsp;
 
 ## Step 4 - TF info
 
@@ -93,9 +133,12 @@ Now we need to figure out what is the _name_ of the transcription factor you are
 
 The name of the gene is listed in the ```cerevisiae_tfs.info.fasta``` file. Find the name (second column) of your transcription factor 
 
+&nbsp;
+
 # LQ 3 
 What is the gene name (column 2) of your transcription factor? What is the description (last column) of your transcription factor?
 
+&nbsp;
 
 ### Step 4a - copy the motif file
 
@@ -104,6 +147,8 @@ You now need to copy the **motif** file that contains information about the moti
 The format for this file is ```GENE.meme``` where GENE is the name of the gene you found in the second column. 
 
 Cop this file into your directory. It is found in the folder: ```/projects/class/binf3101_001/``` 
+
+&nbsp;
 
 ## Step 5 - Search for the motif
 
@@ -120,8 +165,12 @@ fimo GENE.meme SRR00000-contigs.v2.fasta
 
 You should now see several files, including ```fimo.tsv```. The tsv file will contain our results
 
+&nbsp;
+
 # LQ 4 
 How many motifs were found in your genome? _hint: the gene name listed in column 2 will be in every line_
+
+&nbsp;
 
 # LQ 5 
 Select one motif hit and make sure there is on the **positive strand**. The value in the 6th column should be "+". Answer the following questions about your motif hit
@@ -130,9 +179,13 @@ Select one motif hit and make sure there is on the **positive strand**. The valu
 - What is the start position of the motif?
 - What is the end position of the motif?
 
+&nbsp;
+
 ## Step 6 - Gene?
 
 When the transcription factor binds to the motif, it may regulate the gene that is _closest_ to it. We want to figure out what gene that might be.
+
+&nbsp;
 
 ### Step 6a - Define boundaries
 
@@ -157,6 +210,8 @@ I would use the command
 ```echo -e "52626_3228_45048_179+,...,43143-\t231\t5246" > to_get.txt```
 
 Now we want to print the sequence to the screen 
+
+&nbsp;
 
 ### Step 6b - Get the sequence
 
@@ -188,6 +243,8 @@ You should now have a fasta sequence printed to your screen.
 
 **COPY THIS SEQUENCE TO A FILE** Copy this sequence to a word document or text document _just in case_ you accidentally close your terminal before completing. 
 
+&nbsp;
+
 ## Step 7 - Blast your region
 
 We now want to figure out _if there is a gene_ present in our region we extracted. 
@@ -197,6 +254,8 @@ We will use BlastX - Open this link to get to blastx https://blast.ncbi.nlm.nih.
 Paste the sequence from the terminal into the section that says **Enter Query Sequence**
 
 Then click **Blast**
+
+&nbsp;
 
 # LQ 6
 Were there any genes in the region you searched?
