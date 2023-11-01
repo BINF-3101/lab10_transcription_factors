@@ -85,7 +85,65 @@ There are 12 columns in the file. These are the columns
  12.  bitscore    bit score
 
 
-# LQ 2 - Which query gene/sequence id had the lowest/most significant e-value? If there is more than one sequence choose one. 
+# LQ 2 - Which query gene/sequence id had the lowest/most significant e-value? If there is more than one sequence, choose one. 
 
-## Step 4 - Find your motif
+## Step 4 - TF info
+
+Now we need to figure out what is the _name_ of the transcription factor you are going to look for. The sequence ID is the identifier of that gene in _S. cerevisiae_. 
+
+The name of the gene is listed in the ```cerevisiae_tfs.info.fasta``` file. Find the name (second column) of your transcription factor 
+
+# LQ 3 
+What is the gene name (column 2) of your transcription factor? What is the description (last column) of your transcription factor?
+
+
+### Step 4a - copy the motif file
+
+You now need to copy the **motif** file that contains information about the motif or motifs recognized by your transcription factor. 
+
+The format for this file is ```GENE.meme``` where GENE is the name of the gene you found in the second column. 
+
+Cop this file into your directory. It is found in the folder: ```/projects/class/binf3101_001/``` 
+
+## Step 5 - Search for the motif
+
+We are now going to search the genome for the motif bound by your transcription factor. To do this, we will use the **Meme** suite we discussed in class. Specifically we will use the ```fimo``` search method. 
+
+Here is how to search for the motif in your genome
+
+```bash
+module load meme      #load the meme suite
+
+fimo GENE.meme SRR00000-contigs.v2.fasta
+
+````
+
+You should now see several files, including ```fimo.tsv```. The tsv file will contain our results
+
+# LQ 4 
+How many motifs were found in your genome? _hint: the gene name listed in column 2 will be in every line_
+
+# LQ 5 
+Select one motif hit and make sure there is on the **positive strand**. The value in the 6th column should be "+". Answer the following questions about your motif hit
+
+- What is the sequence name that it was found on?
+- What is the start position of the motif?
+- What is the end position of the motif?
+
+## Step 6 - Gene?
+
+When the transcription factor binds to the motif, it may regulate the gene that is _closest_ to it. We want to figure out what gene that might be.
+
+### Step 6a - Define boundaries
+
+We want to look 5,000 base pairs down from our gene. To do this, you will add 5,000 to the **end position** of the motif you found above.
+
+For example, if the motif ended at position 345 I would want to look up until position 5,345.
+
+
+  
+
+
+
+
 
