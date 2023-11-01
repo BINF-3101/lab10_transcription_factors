@@ -268,7 +268,8 @@ If so, what is that gene likely to be? This information will likely be in the de
 
 For example, if you got the results shown below, you would say it's probably a "cell wall protein" or "family 17 glucosidase"
 
-![image](https://github.com/BINF-3101/lab10_transcription_factors/assets/47755288/67b2d838-358c-4859-bd30-a7382d2d735b)
+![image](https://github.com/BINF-3101/lab10_transcription_factors/assets/47755288/f2e79ab9-f86c-4e2a-9223-92e2eb00edaf)
+
 
 
 
