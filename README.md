@@ -94,6 +94,10 @@ This will display the results with all the columns aligned
 # LQ 1
 How many TFs did you find in your protein sequences? 
 
+&nbsp;
+
+### Step 3a - Examine the different columns
+
 There are 12 columns in the file. These are the columns
 
    1.  qseqid      query or source (gene) sequence id
