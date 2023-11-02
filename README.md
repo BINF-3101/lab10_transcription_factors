@@ -39,7 +39,7 @@ You will need the following files in your directory to start
 - cerevisiae_tfs.info.fasta
 - cerevisiae_tfs.fasta
 - clear_SRR00000.prot.fasta
-- SRR00000-contigs.v2.fasta
+- SRR00000-contigs.v2.fa
 
 The two files ```cerevisiae_tfs.info.fasta``` and ```cerevisiae_tfs.fasta``` are both in the folder ```/projects/class/binf3101_001/tf_files/```
 
@@ -47,7 +47,7 @@ Copy both of these files to your lab 10 directory.
 
 You will have a copy of your protein sequences, in the form of```clear_SRR00000.prot.fasta``` in your lab_9 folder. 
 
-You will have a copy of your assembled genome, in the form of ```SRR00000-contigs.v2.fasta``` in your lab_5 folder. 
+You will have a copy of your assembled genome, in the form of ```SRR00000-contigs.v2.fa``` in your lab_5 folder. 
 
 &nbsp;
 
@@ -163,7 +163,7 @@ Here is how to search for the motif in your genome
 ```bash
 module load meme      #load the meme suite
 
-fimo GENE.meme SRR00000-contigs.v2.fasta
+fimo GENE.meme SRR00000-contigs.v2.fa
 
 ````
 
