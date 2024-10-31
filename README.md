@@ -39,7 +39,7 @@ You will need the following files in your directory to start
 - cerevisiae_tfs.info.fasta
 - cerevisiae_tfs.fasta
 - SRRXXXXXXX.prot.fasta
-- SRRXXXXXXX-contigs.v3.fa.masked
+- SRRXXXXXXX-contigs.v2.fa.masked
 
 The two files ```cerevisiae_tfs.info.fasta``` and ```cerevisiae_tfs.fasta``` are both in the folder ```/projects/class/binf3101_001/tf_files/```
 
