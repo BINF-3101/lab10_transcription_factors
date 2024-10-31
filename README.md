@@ -166,7 +166,11 @@ We are now going to search the genome for the motif bound by your transcription 
 Here is how to search for the motif in your genome
 
 ```bash
-module load meme      #load the meme suite
+#setup meme - copy this exactly 
+
+export PATH=/projects/class/binf3101_001/meme/bin:/projects/class/binf3101_001/meme/libexec/meme-5.5.7:$PATH
+
+#load the meme suite
 
 fimo GENE.meme SRR00000-contigs.v2.fa
 
