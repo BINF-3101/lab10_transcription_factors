@@ -45,9 +45,9 @@ The two files ```cerevisiae_tfs.info.fasta``` and ```cerevisiae_tfs.fasta``` are
 
 Copy both of these files to your lab 10 directory.
 
-You will have a copy of your protein sequences, in the form of ```SRRXXXXXXX.prot.fasta``` in your lab_9 folder. 
+You will have a copy of your protein sequences, in the form of ```SRRXXXXXXX.prot.fasta``` in your lab_8 folder. 
 
-You will have a copy of your assembled genome, in the form of ```SRRXXXXXXX-contigs.v3.fa.masked``` in your lab_5 folder. 
+You will have a copy of your assembled genome, in the form of ```SRRXXXXXXX-contigs.v2.fa.masked``` in your lab_4 folder. 
 
 &nbsp;
 
