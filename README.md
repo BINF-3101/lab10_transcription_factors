@@ -188,7 +188,7 @@ How many motifs were found in your genome? _hint: the gene name listed in column
 # LQ 5 
 Select one motif hit and make sure there is on the **positive strand**. The value in the 6th column should be "+". Answer the following questions about your motif hit
 
-- What is the sequence name that it was found on? (It is the entire "word", for example ```52626_3228_45048_179+,...,43143-```)
+- What is the sequence name that it was found on? (It is the entire "word", for example ```52626_3228_45048_179+,...,43143-``` OR if you have spaces in your name it will be just the first part ```52626```)
 - What is the start position of the motif?
 - What is the end position of the motif?
 
