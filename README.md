@@ -172,7 +172,7 @@ export PATH=/projects/class/binf3101_001/meme/bin:/projects/class/binf3101_001/m
 
 #load the meme suite
 
-fimo GENE.meme SRR00000-contigs.v2.fa
+fimo GENE.meme SRR00000-contigs.v2.fa.masked
 
 ````
 
