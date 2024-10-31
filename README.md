@@ -218,9 +218,17 @@ If this were the raw information for my sequence
 
 ```52626_3228_45048_179+,...,43143-	231	246```
 
+**OR** if you had spaces in your name it would be 
+
+```52626	231	246```
+
 I would use the command
 
 ```echo -e "52626_3228_45048_179+,...,43143-\t231\t5246" > to_get.txt```
+
+**OR** if you had spaces in your name
+
+```echo -e "52626\t231\t5246" > to_get.txt```
 
 Now we want to print the sequence to the screen 
 
